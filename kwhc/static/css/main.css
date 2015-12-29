@@ -1,0 +1,28 @@
+
+body {
+    font-family: helvetica, sans-serif;
+}
+h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+
+.device {
+    background: #867777;
+    border-bottom: 1px solid #fefefe;
+    padding: 20px;
+    text-align: center;
+}
+.device__title {
+    margin-top: 0;
+    font-size: 24px;
+}
+.device__button {
+    width: 48%;
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: none;
+    background-color: lightblue;
+}
