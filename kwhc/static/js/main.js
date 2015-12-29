@@ -16,6 +16,6 @@ var KWHC = {
 
 };
 
-window.baseUrl = 'http://localhost:5000/';
+window.baseUrl = '';
 window._wkhc = KWHC;
 window._wkhc.init();
