@@ -15,8 +15,7 @@ logger = logging.getLogger('alembic.env')
 
 # add your model's MetaData object here
 # for 'autogenerate' support
-import kwhc.nodes.models  # noqa
-
+import kwhc.api.models  # noqa
 
 from flask import current_app  # noqa
 config.set_main_option('sqlalchemy.url',
