@@ -2,7 +2,7 @@
 
 {% block content %}
     {% for d in devices %}
-        <div class="device" data-name="{{ d.name }}">
+        <div class="device bg-color--{{ loop.index0 % 5 }} " data-name="{{ d.name }}">
             <h1 class="device__title">{{ d.name }}</h1>
             <button class="device__button device__button--on" data-action="on">On</button>
             <button class="device__button device__button--off" data-action="off">Off</button>

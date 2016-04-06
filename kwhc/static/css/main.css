@@ -1,28 +1,67 @@
-
+* {
+    box-sizing: border-box;;
+    padding: 0;
+    margin: 0;
+}
 body {
-    font-family: helvetica, sans-serif;
+    font-family: avenir, helvetica, sans-serif;
 }
 h1 {
     font-size: 32px;
     font-weight: 500;
 }
 
+.bg-color--0 {
+    background: #FE938C !important;
+}
+.bg-color--1 {
+    background: #E6B89C !important;
+}
+.bg-color--2 {
+    background: #EAD2AC !important;
+}
+.bg-color--3 {
+    background: #9CAFB7 !important;
+}
+.bg-color--4 {
+    background: #4281A4 !important;
+}
 
 .device {
-    background: #867777;
     border-bottom: 1px solid #fefefe;
-    padding: 20px;
-    text-align: center;
+    /* text-align: center; */
+    height: 20vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
 }
+
 .device__title {
-    margin-top: 0;
-    font-size: 24px;
+    font-size: 1em;
+    height: 33%;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    border-color: rgba(100, 100, 100, 0.1);
+    color: rgba(67, 54, 68, 0.46);
+    font-weight: 300;
 }
 .device__button {
-    width: 48%;
-    height: 60px;
-    font-size: 20px;
+    width: 50%;
+    height: 66.66%;
+    font-size: 1em;
     border: none;
     border-radius: none;
-    background-color: lightblue;
+    background: transparent;
+    color: rgba(0, 0, 10, 0.8);
+    text-transform: uppercase;
+}
+.device__button--on {
+    background: rgba(0, 0, 0, 0.05);
+}
+.device__button--off {
+    background: rgba(0, 0, 0, 0.1);
 }
