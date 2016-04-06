@@ -28,8 +28,6 @@ h1 {
 }
 
 .device {
-    border-bottom: 1px solid #fefefe;
-    /* text-align: center; */
     height: 20vh;
     display: flex;
     flex-flow: row wrap;
@@ -40,23 +38,21 @@ h1 {
     font-size: 1em;
     height: 33%;
     display: flex;
-    margin: auto;
-    width: 100%;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid gray;
-    border-color: rgba(100, 100, 100, 0.1);
-    color: rgba(67, 54, 68, 0.46);
+    margin: auto;
+    width: 100%;
+    color: rgba(65, 55, 65, 0.5);
     font-weight: 300;
 }
 .device__button {
     width: 50%;
     height: 66.66%;
-    font-size: 1em;
+    font-size: 2em;
+    letter-spacing: 0.05em;
     border: none;
-    border-radius: none;
     background: transparent;
-    color: rgba(0, 0, 10, 0.8);
+    color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
 }
 .device__button--on {
