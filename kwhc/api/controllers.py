@@ -15,7 +15,7 @@ def pingpong():
         'data': 'pong'
     })
 
-@bp.route('/control/device/<device_name>/<state>', methods=['POST', 'GET'])
+@bp.route('/control/device/<path:device_name>/<state>', methods=['POST', 'GET'])
 def control_node(device_name, state):
     r = { 'status': 'ok'}
 
