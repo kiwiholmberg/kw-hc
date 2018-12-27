@@ -1,12 +1,29 @@
 const express = require('express')
+require('express-async-errors')
+
+const next = require('next')
+
+const config = require('./config')
 const devices = require('./api/devices')
 
-const app = express()
+const dev = process.env.NODE_ENV !== 'production'
+const app = next({ dev })
+const handle = app.getRequestHandler()
 
-app.get('/api/health', (req, res) => { res.send('Hello World') })
+app.prepare().then(() => {
+  const server = express()
 
-app.get('/api/devices', devices.get)
+  // API rutes
+  server.get('/api/devices', devices.list)
+  server.post('/api/devices/:name/:command', devices.control)
 
-app.use(express.static('public'))
+  // Page routes
+  server.get('*', (req, res) => handle(req, res))
 
-app.listen(3000)
+  server.listen(config.server.port)
+  console.log(`Listening on port ${config.server.port}`)
+})
+.catch((ex) => {
+  console.error(ex.stack)
+  process.exit(1)
+})

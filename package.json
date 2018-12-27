@@ -1,21 +1,32 @@
 {
   "name": "kw-hc-server",
+  "engines": {
+    "node": ">= 10.0.0"
+  },
   "version": "1.0.0",
-  "description": "",
+  "description": "Web interface and API for Telldus devices",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "start:watch": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
     "lint": "standard"
   },
   "author": "Kiwi Holmberg",
   "license": "MIT",
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
     "express": "^4.16.4",
-    "standard": "^12.0.1"
+    "express-async-errors": "^3.1.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^7.0.2",
+    "node-sass": "^4.11.0",
+    "pify": "^4.0.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "telldus": "^1.1.2"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "standard": "^12.0.1"
   }
 }
